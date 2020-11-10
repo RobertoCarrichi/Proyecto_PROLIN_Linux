@@ -7,7 +7,7 @@ Desarrollado por:
 
 - Ortega Lujano, Conic
 
-Estudiantes de la Facultad de inteniería, **UNAM**.
+Estudiantes de la Facultad de ingeniería, **UNAM**.
 
 ### Información importante
 
