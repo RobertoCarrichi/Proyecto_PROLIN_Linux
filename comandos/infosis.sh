@@ -1,6 +1,6 @@
 #!/bin/bash
-sudo apt install neofetch
-clear
+#sudo apt install neofetch
+#clear
 printf "****************************** Aquí podrás ver información del sistema ******************************\n"
 printf "\n*************** Sistema Operativo ***************\n" 
 cat /etc/issue 
