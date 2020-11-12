@@ -130,5 +130,26 @@ if ! shopt -oq posix; then
   fi
 fi
 
-trap '' 2
-trap '' 20
+##########################################################################
+# Comandos que bloquean las señales que se enviaban con Ctrl+C o Ctrl+Z  #
+##########################################################################
+
+                               trap '' 2;
+                               trap '' 20;
+
+###########################################################
+#                 COMANDOS PROYECTO PROLIN                #
+alias main='./Main.sh';
+alias ayuda='./comandos/ayuda.sh';
+alias arbol='./comandos/arbol1.sh':
+alias fecha='./comandos/fecha.sh;
+alias hora='./comandos/hora.sh';
+alias busqueda='./comandos/busqueda.sh';
+alias salir='./comandos/salir.sh';
+alias prebeplayer='./prebeplayer/prebeplayer.sh';
+alias infosis='./comandos/infosis.sh';
+alias ahorcado='./juegos/ahorcado.sh;
+alias gato='./juegos/gato.sh';
+alias creditos='./comandos/creditos.sh';
+       
+############################################################
