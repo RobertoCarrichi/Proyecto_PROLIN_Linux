@@ -149,7 +149,7 @@ trap '' 20;
  alias hora='/bin/bash $(find ~/ -type f -name hora.sh)';               #
  alias infosis='/bin/bash $(find ~/ -type f -name infosis.sh)';         #
  alias salir='/bin/bash $(find ~/ -type f -name salir.sh)';             #
- alias ahorcado='/bin/bash $(find ~/ -type f -name ahorcado.sh)';       #
+ alias carrerita='/bin/bash $(find ~/ -type f -name carrerita.sh)';       #
  alias dado='/bin/bash $(find ~/ -type f -name dado.sh)';               #
  alias prebeplayer='/bin/bash $(find ~/ -type f -name prebeplayer.sh)'; #
 #                                                                       #
