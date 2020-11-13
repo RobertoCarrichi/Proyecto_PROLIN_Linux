@@ -1,6 +1,6 @@
 #!/bin/bash
-#trap '' 2;
-#trap '' 20;
+trap '' 2 #Ignora los CtrC, ignora ^C 
+trap "" TSTP #ignora la señal TSTP enviada por CtrlZ ignora ^Z
 
 RESET="\033[0m";
 NEGRITA="\033[1m";
