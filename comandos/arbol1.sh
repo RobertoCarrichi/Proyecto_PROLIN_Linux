@@ -1,4 +1,6 @@
 #!/bin/bash
+trap '' 2 #Ignora los CtrC, ignora ^C 
+trap "" TSTP #ignora la señal TSTP enviada por CtrlZ ignora ^Z
 
 # Este script busca hacer una simulación del comando "tree".
 
@@ -60,3 +62,4 @@ echo $RUTA;
 arbol $RUTA 0;
 
 exit 0;
+tap 2
