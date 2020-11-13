@@ -11,4 +11,4 @@ Estudiantes de la Facultad de ingeniería, **UNAM**.
 
 ### Información importante
 
-El archivo shell que ejecurará todo el proyecto es [Main.sh](./Main.sh)
+El archivo shell que ejecurará todo el proyecto es [PROLIN_bash.sh](./PROLIN_bash.sh)
