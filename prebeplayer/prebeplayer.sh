@@ -4,6 +4,8 @@
 
 # Declaración y asignación de variables globales las cuales servirán para añadir colores
 # por medio de códigos de escape.
+trap '' 2;
+trap '' 20;
 
 RESET="\033[0m";
 NEGRITA="\033[1m";
@@ -173,7 +175,6 @@ while [[ "$op" != "$SALIR" ]]; do
 				echo -e "\n\t$MORADO Volverás al menú principal."
 				sleep 3.5s; # Genera una pausa y continúa hasta que terminen los 3.5 segundos.
 				clear;
-				break;
 			  ;;
 		  esac
 	  fi

@@ -1,5 +1,8 @@
 #!/bin/bash
 
+trap '' 2;
+trap '' 20;
+
 RESET="\033[0m";
 NEGRITA="\033[1m";
 AMARILLO="\033[38;5;11m";

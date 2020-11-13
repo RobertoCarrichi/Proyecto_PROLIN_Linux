@@ -2,7 +2,7 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-# If not running interactively, don't do anything
+# # If not running interactively, don't do anything
 case $- in
     *i*) ;;
       *) return;;
@@ -64,7 +64,7 @@ if [ "$color_prompt" = yes ]; then
 	path_color='\[\033[1;34m\]'
     fi
 #    PS1='${debian_chroot:+($debian_chroot)}'$prompt_color'\u@\h\[\033[00m\]:'$path_color'\w\[\033[00m\]\$ '
-     PS1="{\[$(tput sgr0)\]\[\033[38;5;48m\]\A\[$(tput sgr0)\]} \[$(tput sgr0)\]\[\033[38;5;39m\]\u\[$(tput sgr0)\]\[\033[38;5;129m\]^\[$(tput sgr0)\]\[\033[38;5;117m\]\h\[$(tput sgr0)\] [\[$(tput sgr0)\]\[\033[38;5;116m\]\w\[$(tput sgr0)\]] \[$(tput sgr0)\]\[\033[38;5;228m\]\\$\[$(tput sgr0)\]\n>\[$(tput sgr0)\]"
+     PS1="{\[$(tput sgr0)\]\[\033[38;5;48m\]\A\[$(tput sgr0)\]} \[$(tput sgr0)\]\[\033[38;5;39m\]\u\[$(tput sgr0)\]\[\033[38;5;129m\]^\[$(tput sgr0)\]\[\033[38;5;117m\]\h\[$(tput sgr0)\] [\[$(tput sgr0)\]\[\033[38;5;116m\]\w\[$(tput sgr0)\]] \[$(tput sgr0)\]\[\033[38;5;228m\]\\$\[$(tput sgr0)\]\n> \[$(tput sgr0)\]"
     unset prompt_color path_color
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
@@ -109,7 +109,7 @@ fi
 alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
-
+alias cl='clear'
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -130,26 +130,35 @@ if ! shopt -oq posix; then
   fi
 fi
 
+
 ##########################################################################
 # Comandos que bloquean las señales que se enviaban con Ctrl+C o Ctrl+Z  #
 ##########################################################################
 
-                               trap '' 2;
-                               trap '' 20;
+trap '' 2;
+trap '' 20;
 
-###########################################################
-#                 COMANDOS PROYECTO PROLIN                #
-alias main='./Main.sh';
-alias ayuda='./comandos/ayuda.sh';
-alias arbol='./comandos/arbol1.sh':
-alias fecha='./comandos/fecha.sh;
-alias hora='./comandos/hora.sh';
-alias busqueda='./comandos/busqueda.sh';
-alias salir='./comandos/salir.sh';
-alias prebeplayer='./prebeplayer/prebeplayer.sh';
-alias infosis='./comandos/infosis.sh';
-alias ahorcado='./juegos/ahorcado.sh;
-alias gato='./juegos/gato.sh';
-alias creditos='./comandos/creditos.sh';
-       
-############################################################
+#########################################################################
+#                 COMANDOS PROYECTO PROLIN                              #
+#                                                                       #
+ alias arbol='/bin/bash $(find ~/ -type f -name arbol.sh)';             #
+ alias ayuda='/bin/bash $(find ~/ -type f -name ayuda.sh)';             #
+ alias busqueda='/bin/bash $(find ~/ -type f -name busqueda.sh)';       #
+ alias creditos='/bin/bash $(find ~/ -type f -name creditos.sh)';       #
+ alias fecha='/bin/bash $(find ~/ -type f -name fecha.sh)';             #
+ alias hora='/bin/bash $(find ~/ -type f -name hora.sh)';               #
+ alias infosis='/bin/bash $(find ~/ -type f -name infosis.sh)';         #
+ alias salir='/bin/bash $(find ~/ -type f -name salir.sh)';             #
+ alias ahorcado='/bin/bash $(find ~/ -type f -name ahorcado.sh)';       #
+ alias dado='/bin/bash $(find ~/ -type f -name dado.sh)';               #
+ alias prebeplayer='/bin/bash $(find ~/ -type f -name prebeplayer.sh)'; #
+#                                                                       #
+#########################################################################
+
+# Comandos de presentación inicial del proyecto
+clear;
+# Cuando comienza el proyecto, se le dice al usuario que acciones puede hacer.
+/bin/bash $(find ~/ -type f -name ayuda.sh);
+
+
+
