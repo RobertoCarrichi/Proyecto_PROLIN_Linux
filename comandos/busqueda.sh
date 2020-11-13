@@ -1,5 +1,8 @@
 #!/bin/bash
 
+trap '' 2 #Ignora los CtrC, ignora ^C 
+trap "" TSTP #ignora la señal TSTP enviada por CtrlZ ignora los 
+
 echo "----------------| BÚSQUEDA DE ARCHIVO |----------------";
 echo "";
 echo "¿Dónde quiere que se realice la búsqueda?";
@@ -10,25 +13,25 @@ echo "";
 echo "2 Buscar en otro directorio";
 echo "";
 echo "Selecciona una opción: " 
-read OPCION 		#lee variable opcion
+read OPCION #lee variable opcion
 
 
-case $OPCION in 	#en caso de que OPCION sea...
-	1) 	#Tecleando 1...
+case $OPCION in #en caso de que OPCION sea...
+	1) #Tecleando 1...
 	clear
 	echo "----------------| BÚSQUEDA DE ARCHIVO |----------------";
 	echo "DIRECTORIO ACTUAL";
 	echo "";
 	echo "Ingresa archivo que quieres buscar: ";
-	read ARCHIVO 	#lee variable archivo
-	if ls | egrep $ARCHIVO #	ls(lista los archivos) egrep(busca la palabra que ingresó dentro de la variable ARCHIVO
-	then 	#Si se encuentra listado el archivo ...
-		echo "Se ha encontrado en `pwd`/$ARCHIVO"; 	#Imprimir directorio actual y el nombre del archivo 
+	read ARCHIVO #lee variable archivo
+	if ls | egrep $ARCHIVO #ls(lista los archivos) egrep(busca la palabra que ingresó dentro de la variable ARCHIVO
+	then #Si se encuentra listado el archivo ...
+		echo "Se ha encontrado en `pwd`/$ARCHIVO"; #Imprimir directorio actual y el nombre del archivo 
 
-	else 	#Si no se encuentra listado el archivo... (``)se usa para ejecutar un comando dentro de una línea de texto
+	else #Si no se encuentra listado el archivo... (``)se usa para ejecutar un comando dentro de una línea de texto
 		echo "No fue encontrado" 
-	fi 	#fin si
-	;; 	#cerrar primer case
+	fi #fin si
+	;; #cerrar primer case
 	
 	2) #Tecleando 2...
 	clear
@@ -54,4 +57,4 @@ case $OPCION in 	#en caso de que OPCION sea...
 	echo "Error";
 	;;
 esac
-
+tap 2
