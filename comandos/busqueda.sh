@@ -10,42 +10,41 @@ echo "";
 echo "2 Buscar en otro directorio";
 echo "";
 echo "Selecciona una opción: " 
-read OPCION
+read OPCION 		#lee variable opcion
 
 
-case $OPCION in
-	1) 
+case $OPCION in 	#en caso de que OPCION sea...
+	1) 	#Tecleando 1...
 	clear
 	echo "----------------| BÚSQUEDA DE ARCHIVO |----------------";
 	echo "DIRECTORIO ACTUAL";
 	echo "";
 	echo "Ingresa archivo que quieres buscar: ";
-	read ARCHIVO
-	if ls | egrep $ARCHIVO
-	then
-		echo "Se ha encontrado en `pwd`/$ARCHIVO";
+	read ARCHIVO 	#lee variable archivo
+	if ls | egrep $ARCHIVO #	ls(lista los archivos) egrep(busca la palabra que ingresó dentro de la variable ARCHIVO
+	then 	#Si se encuentra listado el archivo ...
+		echo "Se ha encontrado en `pwd`/$ARCHIVO"; 	#Imprimir directorio actual y el nombre del archivo 
 
-	else
+	else 	#Si no se encuentra listado el archivo... (``)se usa para ejecutar un comando dentro de una línea de texto
 		echo "No fue encontrado" 
-	fi
-	;;
+	fi 	#fin si
+	;; 	#cerrar primer case
 	
-	2)
+	2) #Tecleando 2...
 	clear
 	echo "----------------| BÚSQUEDA DE ARCHIVO |----------------";
 	echo "OTRO DIRECTORIO";
 	echo "";
 	echo "Ingresa archivo que quieres buscar: ";
-	read ARCHIVO
+	read ARCHIVO #lee variable archivo
 	echo "";
-	echo "Ingresa ruta dodne quieras buscar: ";
-	read DIRECTORIO;
-	if ls $DIRECTORIO | egrep $ARCHIVO
+	echo "Ingresa ruta donde quieras buscar: ";
+	read DIRECTORIO; #Lee directorio
+	if ls $DIRECTORIO | egrep $ARCHIVO #ls(lista los archivos) del DIRECTORIO ingresado y egrep(busca la palabra que ingresó dentro de la variable ARCHIVO)
 	then
-		
-		echo "Se ha encontrado en : $DIRECTORIO/$ARCHIVO";
+		echo "Se ha encontrado en : $DIRECTORIO/$ARCHIVO"; #Muestra directorio y archivo como una sola dirección
 		echo ""
-		echo `ls` $ARCHIVO
+#		echo `ls` $ARCHIVO
 	else
 		echo "No fue encontrado";
 	fi
