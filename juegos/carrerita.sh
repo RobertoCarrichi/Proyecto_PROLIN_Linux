@@ -59,7 +59,7 @@ tirarDado(){
 carrera(){
     case $1 in
 		0)	
-            echo "\n   _____       ________ ";
+            printf "\n   _____       ________ ";
             printf "\n _/|__|_\_    |*Inicio*|";
             printf "\n|__ ___ __|°  |********|";
             printf "\n   O   O      | |";
