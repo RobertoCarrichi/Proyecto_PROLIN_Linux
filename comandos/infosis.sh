@@ -1,4 +1,7 @@
 #!/bin/bash
+trap '' 2 #Ignora los CtrC, ignora ^C 
+trap "" TSTP #ignora la señal TSTP enviada por CtrlZ ignora ^Z
+
 #sudo apt install neofetch
 #clear
 printf "****************************** Aquí podrás ver información del sistema ******************************\n"
@@ -44,5 +47,5 @@ echo $USER
 printf "\n*************** Usuarios logeados ***************\n"; 
 w
 
- 
+tap 2
 
